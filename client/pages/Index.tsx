@@ -18,7 +18,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-950 pl-[154px] pr-4 py-4">
-      <div className="bg-slate-900 rounded-2xl shadow-xl border border-slate-700 w-auto flex-grow flex flex-col justify-center items-center mt-28 mr-[200px] pt-[83px] pb-12 max-w-[1365px] text-center">
+      <div className="bg-slate-900 rounded-3xl shadow-2xl border border-slate-700 flex flex-col justify-center items-center p-16 text-center transform scale-110">
         {/* Main heading */}
         <h1 className="text-6xl font-bold text-slate-100 mb-12 tracking-tight leading-10">
           Termdesk
