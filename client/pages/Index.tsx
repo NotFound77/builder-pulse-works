@@ -28,19 +28,19 @@ export default function Index() {
         <div className="space-y-6">
           {/* Create a Room */}
           <div>
-            <h3 className="text-xl font-semibold text-slate-700 hover:text-slate-900 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-50">
+            <h5 className="text-xl font-semibold text-slate-700 hover:text-slate-900 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-50">
               Create a Room
-            </h3>
+            </h5>
           </div>
 
           {/* Join a Room */}
           <div>
-            <h3
+            <h5
               className="text-xl font-semibold text-slate-700 hover:text-slate-900 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-50"
               onClick={handleJoinRoomClick}
             >
               Join a Room
-            </h3>
+            </h5>
 
             {/* Dropdown input for room code */}
             {showJoinInput && (
