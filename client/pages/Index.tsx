@@ -20,15 +20,20 @@ export default function Index() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-950 p-4">
       <div className="bg-slate-900 rounded-3xl shadow-2xl border border-slate-700 flex flex-col justify-center items-center p-16 text-center transform scale-x-125 scale-y-110">
         {/* Main heading */}
-        <h1 className="text-8xl font-bold text-slate-100 mb-16 tracking-tight">
+        <h1 className="text-5xl font-bold text-slate-100 mb-4 tracking-tight">
           Termdesk
         </h1>
 
+        {/* Floating tagline */}
+        <p className="text-lg text-slate-400 mb-16 font-light tracking-wide">
+          Work together, work better.
+        </p>
+
         {/* Action buttons */}
-        <div className="space-y-8">
+        <div className="space-y-3">
           {/* Create a Room */}
           <div>
-            <h5 className="text-2xl font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-800">
+            <h5 className="text-sm font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-800">
               Create a Room
             </h5>
           </div>
@@ -36,7 +41,7 @@ export default function Index() {
           {/* Join a Room */}
           <div>
             <h5
-              className="text-2xl font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-800"
+              className="text-sm font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-800"
               onClick={handleJoinRoomClick}
             >
               Join a Room
