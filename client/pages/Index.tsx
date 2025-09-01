@@ -17,31 +17,31 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 p-4">
-      <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-12 w-full max-w-md text-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-950 pl-[154px] pr-4 py-4">
+      <div className="bg-slate-900 rounded-2xl shadow-xl border border-slate-700 w-auto flex-grow flex flex-col justify-center items-center mt-28 mr-[200px] pt-[83px] pb-12 max-w-[1365px] text-center">
         {/* Main heading */}
-        <h1 className="text-4xl font-bold text-slate-900 mb-12 tracking-tight">
+        <h1 className="text-6xl font-bold text-slate-100 mb-12 tracking-tight leading-10">
           Termdesk
         </h1>
-
+        
         {/* Action buttons */}
         <div className="space-y-6">
           {/* Create a Room */}
           <div>
-            <h5 className="text-xl font-semibold text-slate-700 hover:text-slate-900 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-50">
+            <h5 className="text-xl font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-800">
               Create a Room
             </h5>
           </div>
-
+          
           {/* Join a Room */}
           <div>
-            <h5
-              className="text-xl font-semibold text-slate-700 hover:text-slate-900 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-50"
+            <h5 
+              className="text-xl font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-800"
               onClick={handleJoinRoomClick}
             >
               Join a Room
             </h5>
-
+            
             {/* Dropdown input for room code */}
             {showJoinInput && (
               <form onSubmit={handleCodeSubmit} className="mt-4 space-y-3">
@@ -50,12 +50,12 @@ export default function Index() {
                   value={roomCode}
                   onChange={(e) => setRoomCode(e.target.value)}
                   placeholder="Enter Code"
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent outline-none transition-shadow duration-200 text-center text-slate-700 placeholder-slate-400"
+                  className="w-full px-4 py-3 border border-slate-600 rounded-lg focus:ring-2 focus:ring-slate-400 focus:border-transparent outline-none transition-shadow duration-200 text-center text-slate-200 placeholder-slate-500 bg-slate-800"
                   autoFocus
                 />
                 <button
                   type="submit"
-                  className="w-full bg-slate-900 text-white py-3 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-200 font-medium"
+                  className="w-full bg-slate-100 text-slate-900 py-3 px-4 rounded-lg hover:bg-slate-200 transition-colors duration-200 font-medium"
                 >
                   Join
                 </button>
