@@ -23,7 +23,7 @@ export default function Index() {
         <h1 className="text-4xl font-bold text-slate-900 mb-12 tracking-tight">
           Termdesk
         </h1>
-        
+
         {/* Action buttons */}
         <div className="space-y-6">
           {/* Create a Room */}
@@ -32,16 +32,16 @@ export default function Index() {
               Create a Room
             </h3>
           </div>
-          
+
           {/* Join a Room */}
           <div>
-            <h3 
+            <h3
               className="text-xl font-semibold text-slate-700 hover:text-slate-900 cursor-pointer transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-slate-50"
               onClick={handleJoinRoomClick}
             >
               Join a Room
             </h3>
-            
+
             {/* Dropdown input for room code */}
             {showJoinInput && (
               <form onSubmit={handleCodeSubmit} className="mt-4 space-y-3">
