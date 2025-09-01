@@ -44,7 +44,7 @@ export default function Index() {
               className="text-sm font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-4 px-6 rounded-lg hover:bg-slate-700 border border-slate-600"
               onClick={handleJoinRoomClick}
             >
-              Join a Room
+              Join
             </h5>
 
             {/* Dropdown input for room code */}
