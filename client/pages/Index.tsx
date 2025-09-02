@@ -77,7 +77,7 @@ export default function Index() {
 
             {/* Dropdown input for room code */}
             {showJoinInput && (
-              <form onSubmit={handleCodeSubmit} className="mt-3 space-y-3">
+              <form onSubmit={handleCodeSubmit} className="mt-3 space-y-3 transform scale-[0.67]">
                 <input
                   type="text"
                   value={roomCode}
