@@ -4,6 +4,29 @@ export default function Index() {
   const [showJoinInput, setShowJoinInput] = useState(false);
   const [roomCode, setRoomCode] = useState("");
 
+  const formatRoomCode = (value: string) => {
+    // Remove all non-alphabetic characters and convert to lowercase
+    const clean = value.replace(/[^a-zA-Z]/g, '').toLowerCase();
+
+    // Limit to 9 characters
+    const limited = clean.slice(0, 9);
+
+    // Add dashes at positions 3 and 6
+    let formatted = limited;
+    if (limited.length > 6) {
+      formatted = limited.slice(0, 3) + '-' + limited.slice(3, 6) + '-' + limited.slice(6);
+    } else if (limited.length > 3) {
+      formatted = limited.slice(0, 3) + '-' + limited.slice(3);
+    }
+
+    return formatted;
+  };
+
+  const handleCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatRoomCode(e.target.value);
+    setRoomCode(formatted);
+  };
+
   const handleJoinRoomClick = () => {
     setShowJoinInput(!showJoinInput);
   };
@@ -53,10 +76,11 @@ export default function Index() {
                 <input
                   type="text"
                   value={roomCode}
-                  onChange={(e) => setRoomCode(e.target.value)}
-                  placeholder="Enter Code"
+                  onChange={handleCodeChange}
+                  placeholder="abc-def-ghi"
                   className="w-full px-4 py-3 border border-slate-600 rounded-lg focus:ring-2 focus:ring-slate-400 focus:border-transparent outline-none transition-shadow duration-200 text-center text-slate-200 placeholder-slate-500 bg-slate-800"
                   autoFocus
+                  maxLength={11}
                 />
                 <button
                   type="submit"
