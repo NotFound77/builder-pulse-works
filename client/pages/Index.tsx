@@ -69,7 +69,10 @@ export default function Index() {
             <div className="space-y-3">
               {/* Create a Room */}
               <div>
-                <h5 className="font-normal text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center" style={{ fontSize: '15px' }}>
+                <h5
+                  className="font-normal text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
+                  style={{ fontSize: "15px" }}
+                >
                   Create a Room
                 </h5>
               </div>
@@ -79,7 +82,7 @@ export default function Index() {
                 <h5
                   className="font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
                   onClick={handleJoinRoomClick}
-                  style={{ fontSize: '15px' }}
+                  style={{ fontSize: "15px" }}
                 >
                   Join
                 </h5>
@@ -93,14 +96,27 @@ export default function Index() {
                 onClick={handleBackClick}
                 className="self-start text-slate-400 hover:text-slate-200 transition-colors duration-200 flex items-center gap-2 text-sm"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
                 Back
               </button>
 
               {/* Join form */}
-              <form onSubmit={handleCodeSubmit} className="space-y-2 transform scale-x-45 scale-y-55">
+              <form
+                onSubmit={handleCodeSubmit}
+                className="space-y-2 transform scale-x-45 scale-y-55"
+              >
                 <input
                   type="text"
                   value={roomCode}
