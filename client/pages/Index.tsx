@@ -51,7 +51,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black p-4">
-      <div className="bg-black rounded-3xl shadow-2xl border border-slate-600 flex flex-col justify-center items-center -mt-[5px] mb-[6px] pt-[123px] px-20 pb-20 text-center transform scale-150 max-w-4xl w-full">
+      <div className="bg-black rounded-3xl shadow-2xl border border-slate-600 flex flex-col justify-center items-center -mt-[5px] -mb-[4px] pt-[115px] px-20 pb-[45px] text-center transform scale-150 max-w-4xl w-full">
         {/* Main heading */}
         <h1 className="text-5xl font-bold text-slate-100 mb-4 tracking-tight">
           Termdesk
