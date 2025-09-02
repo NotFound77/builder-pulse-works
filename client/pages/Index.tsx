@@ -61,7 +61,10 @@ export default function Index() {
         <div className="space-y-3">
           {/* Create a Room */}
           <div>
-            <h5 className="font-normal text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center" style={{ fontSize: '15px' }}>
+            <h5
+              className="font-normal text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
+              style={{ fontSize: "15px" }}
+            >
               Create a Room
             </h5>
           </div>
@@ -71,7 +74,7 @@ export default function Index() {
             <h5
               className="font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
               onClick={handleJoinRoomClick}
-              style={{ fontSize: '15px' }}
+              style={{ fontSize: "15px" }}
             >
               Join
             </h5>
@@ -82,7 +85,9 @@ export default function Index() {
               <form
                 onSubmit={handleCodeSubmit}
                 className={`space-y-3 transform scale-[0.67] transition-opacity duration-200 ${
-                  showJoinInput ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                  showJoinInput
+                    ? "opacity-100"
+                    : "opacity-0 pointer-events-none"
                 }`}
               >
                 <input
