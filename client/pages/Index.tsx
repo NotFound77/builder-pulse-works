@@ -6,7 +6,7 @@ export default function Index() {
 
   const formatRoomCode = (value: string) => {
     // Remove all non-alphabetic characters and convert to lowercase
-    const clean = value.replace(/[^a-zA-Z]/g, '').toLowerCase();
+    const clean = value.replace(/[^a-zA-Z]/g, "").toLowerCase();
 
     // Limit to 9 characters
     const limited = clean.slice(0, 9);
@@ -14,9 +14,14 @@ export default function Index() {
     // Add dashes at positions 3 and 6
     let formatted = limited;
     if (limited.length > 6) {
-      formatted = limited.slice(0, 3) + '-' + limited.slice(3, 6) + '-' + limited.slice(6);
+      formatted =
+        limited.slice(0, 3) +
+        "-" +
+        limited.slice(3, 6) +
+        "-" +
+        limited.slice(6);
     } else if (limited.length > 3) {
-      formatted = limited.slice(0, 3) + '-' + limited.slice(3);
+      formatted = limited.slice(0, 3) + "-" + limited.slice(3);
     }
 
     return formatted;
