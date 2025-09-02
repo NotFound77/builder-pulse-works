@@ -33,7 +33,12 @@ export default function Index() {
   };
 
   const handleJoinRoomClick = () => {
-    setShowJoinInput(!showJoinInput);
+    setShowJoinInput(true);
+  };
+
+  const handleBackClick = () => {
+    setShowJoinInput(false);
+    setRoomCode("");
   };
 
   const handleCodeSubmit = (e: React.FormEvent) => {
@@ -57,57 +62,63 @@ export default function Index() {
           Work together, work better.
         </p>
 
-        {/* Action buttons */}
-        <div className="space-y-3">
-          {/* Create a Room */}
-          <div>
-            <h5
-              className="font-normal text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
-              style={{ fontSize: "15px" }}
-            >
-              Create a Room
-            </h5>
-          </div>
+        {/* Action buttons or Join form */}
+        <div className="min-h-[120px] flex flex-col justify-center">
+          {!showJoinInput ? (
+            /* Main buttons */
+            <div className="space-y-3">
+              {/* Create a Room */}
+              <div>
+                <h5 className="font-normal text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center" style={{ fontSize: '15px' }}>
+                  Create a Room
+                </h5>
+              </div>
 
-          {/* Join a Room */}
-          <div>
-            <h5
-              className="font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
-              onClick={handleJoinRoomClick}
-              style={{ fontSize: "15px" }}
-            >
-              Join
-            </h5>
-
-            {/* Reserved space for dropdown form */}
-            <div className="h-[120px] mt-3">
-              {/* Dropdown input for room code */}
-              <form
-                onSubmit={handleCodeSubmit}
-                className={`space-y-3 transform scale-[0.67] transition-opacity duration-200 ${
-                  showJoinInput
-                    ? "opacity-100"
-                    : "opacity-0 pointer-events-none"
-                }`}
+              {/* Join a Room */}
+              <div>
+                <h5
+                  className="font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
+                  onClick={handleJoinRoomClick}
+                  style={{ fontSize: '15px' }}
+                >
+                  Join
+                </h5>
+              </div>
+            </div>
+          ) : (
+            /* Join form with back button */
+            <div className="space-y-4">
+              {/* Back button */}
+              <button
+                onClick={handleBackClick}
+                className="self-start text-slate-400 hover:text-slate-200 transition-colors duration-200 flex items-center gap-2 text-sm"
               >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back
+              </button>
+
+              {/* Join form */}
+              <form onSubmit={handleCodeSubmit} className="space-y-3 transform scale-[0.67]">
                 <input
                   type="text"
                   value={roomCode}
                   onChange={handleCodeChange}
                   placeholder="abc-def-ghi"
                   className="w-full px-4 py-2 border border-slate-600 rounded-lg focus:ring-2 focus:ring-slate-400 focus:border-transparent outline-none transition-shadow duration-200 text-center text-slate-200 placeholder-slate-500 bg-slate-800 text-sm"
-                  autoFocus={showJoinInput}
+                  autoFocus
                   maxLength={11}
                 />
                 <button
                   type="submit"
                   className="w-full bg-slate-100 text-slate-900 py-2 px-4 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-sm font-medium"
                 >
-                  Join
+                  Join Room
                 </button>
               </form>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
