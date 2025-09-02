@@ -61,7 +61,7 @@ export default function Index() {
         <div className="space-y-3">
           {/* Create a Room */}
           <div>
-            <h5 className="text-lg font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600">
+            <h5 className="text-lg font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center">
               Create a Room
             </h5>
           </div>
@@ -69,7 +69,7 @@ export default function Index() {
           {/* Join a Room */}
           <div>
             <h5
-              className="font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600"
+              className="font-semibold text-slate-300 hover:text-slate-100 cursor-pointer transition-colors duration-200 py-1 px-3 rounded-lg hover:bg-slate-700 border border-slate-600 w-auto self-center"
               onClick={handleJoinRoomClick}
               style={{ fontSize: '19px' }}
             >
