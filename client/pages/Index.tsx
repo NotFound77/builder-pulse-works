@@ -75,16 +75,22 @@ export default function Index() {
               Join
             </h5>
 
-            {/* Dropdown input for room code */}
-            {showJoinInput && (
-              <form onSubmit={handleCodeSubmit} className="mt-3 space-y-3 transform scale-[0.67]">
+            {/* Reserved space for dropdown form */}
+            <div className="h-[120px] mt-3">
+              {/* Dropdown input for room code */}
+              <form
+                onSubmit={handleCodeSubmit}
+                className={`space-y-3 transform scale-[0.67] transition-opacity duration-200 ${
+                  showJoinInput ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+              >
                 <input
                   type="text"
                   value={roomCode}
                   onChange={handleCodeChange}
                   placeholder="abc-def-ghi"
                   className="w-full px-4 py-2 border border-slate-600 rounded-lg focus:ring-2 focus:ring-slate-400 focus:border-transparent outline-none transition-shadow duration-200 text-center text-slate-200 placeholder-slate-500 bg-slate-800 text-sm"
-                  autoFocus
+                  autoFocus={showJoinInput}
                   maxLength={11}
                 />
                 <button
@@ -94,7 +100,7 @@ export default function Index() {
                   Join
                 </button>
               </form>
-            )}
+            </div>
           </div>
         </div>
       </div>
